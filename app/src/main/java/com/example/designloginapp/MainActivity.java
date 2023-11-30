@@ -23,6 +23,8 @@ import android.widget.Toast;
 
 import org.firezenk.bubbleemitter.BubbleEmitterView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     TextView title, subTitle, forgetPass, noAcc;
     Button loginBtn;
@@ -72,6 +74,16 @@ public class MainActivity extends AppCompatActivity {
         noAcc.startAnimation(slideUpBtn);
 
 
+        bubbleEmitter = findViewById(R.id.bubbleEmitter);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                emitBubbles();
+            }
+        }, 5000);
+
+
+
         forgetPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,6 +116,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    private void emitBubbles() {
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                int size = new Random().nextInt(61)+ 20;
+                bubbleEmitter.emitBubble(size);
+                emitBubbles();
+            }
+        }, new Random().nextInt(401) +100);
     }
 
     public void logged(View view){
