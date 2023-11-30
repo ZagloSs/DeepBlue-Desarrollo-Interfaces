@@ -7,6 +7,11 @@
     android:background="@drawable/migradiente"
     tools:context=".MainActivity">
 
+    <org.firezenk.bubbleemitter.BubbleEmitterView
+        android:id="@+id/bubbleEmitter"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -185,5 +190,8 @@
 
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

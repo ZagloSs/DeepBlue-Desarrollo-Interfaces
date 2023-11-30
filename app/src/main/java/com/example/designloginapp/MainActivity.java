@@ -8,6 +8,7 @@ import androidx.core.widget.TextViewOnReceiveContentListener;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Layout;
 import android.view.View;
 import android.view.animation.Animation;
@@ -20,11 +21,17 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.firezenk.bubbleemitter.BubbleEmitterView;
+
 public class MainActivity extends AppCompatActivity {
     TextView title, subTitle, forgetPass, noAcc;
     Button loginBtn;
     EditText email, pass;
     CheckBox remember;
+
+    BubbleEmitterView bubbleEmitter;
+
+    Handler handler = new Handler();
 
 
     @Override
@@ -44,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.buttonlogin);
         remember = findViewById(R.id.remember);
         noAcc = findViewById(R.id.noacc);
+
+
 
 
         Animation titleAnim = AnimationUtils.loadAnimation(this, R.anim.fade_in_translate);
@@ -78,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                            Toast.makeText(MainActivity.this, "Recovery email sended", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "Recovery email sent", Toast.LENGTH_SHORT).show();
 
                     }
                 });
