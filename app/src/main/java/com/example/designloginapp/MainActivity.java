@@ -75,12 +75,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         bubbleEmitter = findViewById(R.id.bubbleEmitter);
+        bubbleEmitter.canExplode(false);
+        bubbleEmitter.setColors(getResources().getColor(R.color.gradientTop),getResources().getColor(R.color.gradientTop),getResources().getColor(R.color.gradientTop));
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 emitBubbles();
             }
-        }, 5000);
+        }, 2500);
 
 
 

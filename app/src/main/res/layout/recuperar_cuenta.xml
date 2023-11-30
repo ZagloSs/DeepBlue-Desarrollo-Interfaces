@@ -18,7 +18,7 @@
         android:drawableTint="@color/md_theme_light_secondaryContainer"
         android:ems="10"
         android:fontFamily="@font/montserrat_light"
-        android:hint="  Your email"
+        android:hint=" Your email"
         android:inputType="textEmailAddress"
         android:textColor="@color/md_theme_light_secondaryContainer"
         android:textColorHint="@color/md_theme_light_secondaryContainer"
