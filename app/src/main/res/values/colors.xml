@@ -3,6 +3,8 @@
         <color name="black">#FF000000</color>
         <color name="white">#FFFFFFFF</color>
         <color name="seed">#005b6c</color>
+        <color name="gradientTop">#06234A</color>
+        <color name="gradientBot">#011229</color>
         <color name="md_theme_light_primary">#00687B</color>
         <color name="md_theme_light_onPrimary">#FFFFFF</color>
         <color name="md_theme_light_primaryContainer">#AEECFF</color>

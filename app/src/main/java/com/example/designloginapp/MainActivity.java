@@ -3,6 +3,7 @@ package com.example.designloginapp;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.core.widget.TextViewOnReceiveContentListener;
 
 import android.content.DialogInterface;
@@ -20,7 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    TextView title, subTitle, forgetPass;
+    TextView title, subTitle, forgetPass, noAcc;
     Button loginBtn;
     EditText email, pass;
     CheckBox remember;
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this, R.color.gradientTop));
+        getWindow().setNavigationBarColor(ContextCompat.getColor(MainActivity.this, R.color.gradientBot));
+
         title = findViewById(R.id.title);
         subTitle = findViewById(R.id.subtitle);
 
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         forgetPass = findViewById(R.id.forgotpass);
         loginBtn = findViewById(R.id.buttonlogin);
         remember = findViewById(R.id.remember);
+        noAcc = findViewById(R.id.noacc);
 
 
         Animation titleAnim = AnimationUtils.loadAnimation(this, R.anim.fade_in_translate);
@@ -55,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         forgetPass.startAnimation(slideUpForget);
         remember.startAnimation(slideUpForget);
         loginBtn.startAnimation(slideUpBtn);
+        noAcc.startAnimation(slideUpBtn);
 
 
         forgetPass.setOnClickListener(new View.OnClickListener() {

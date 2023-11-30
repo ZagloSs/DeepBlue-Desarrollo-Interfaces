@@ -139,6 +139,19 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
+    <TextView
+        android:id="@+id/noacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+        android:fontFamily="@font/montserrat_light"
+        android:text="Don't have an account? Create one now!"
+        android:textColor="@color/md_theme_light_secondaryContainer"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/buttonlogin" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
         android:layout_width="wrap_content"
