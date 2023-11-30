@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomAlert" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="android:background">#011229</item>
+        <item name="android:textColor">@color/md_theme_light_secondaryContainer</item>
+
+    </style>
+
+
+</resources>
